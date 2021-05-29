@@ -30,6 +30,4 @@ class CardCell: UICollectionViewCell {
     }
 
     
-    
-    
 }

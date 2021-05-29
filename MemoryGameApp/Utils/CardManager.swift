@@ -22,4 +22,5 @@ class CardManager {
         return cardsArray
     }
     
+
 }

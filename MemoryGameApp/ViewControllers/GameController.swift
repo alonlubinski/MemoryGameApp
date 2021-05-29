@@ -84,8 +84,6 @@ class GameController: UIViewController {
         secondIndext = nil
     }
     
-    
-
 }
 
 extension GameController: UICollectionViewDelegate, UICollectionViewDataSource {

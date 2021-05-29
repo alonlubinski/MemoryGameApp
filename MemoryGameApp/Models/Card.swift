@@ -29,5 +29,6 @@ class Card {
         return Card(card: self)
     }
     
+    
 }
 
