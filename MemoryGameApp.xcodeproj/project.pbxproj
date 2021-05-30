@@ -15,6 +15,9 @@
 		8321426E26593CD100A7A2BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8321426C26593CD100A7A2BB /* LaunchScreen.storyboard */; };
 		8321427726594B7500A7A2BB /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321427626594B7400A7A2BB /* GameController.swift */; };
 		8321427C26595E9700A7A2BB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321427B26595E9700A7A2BB /* Card.swift */; };
+		83583B7726625A8F00EE163F /* TopTenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83583B7626625A8F00EE163F /* TopTenController.swift */; };
+		83583B7926626EEA00EE163F /* TopTenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83583B7826626EEA00EE163F /* TopTenManager.swift */; };
+		83583B7B266297F800EE163F /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83583B7A266297F700EE163F /* Record.swift */; };
 		83E386A6265BB8FB005FDE69 /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E386A5265BB8FB005FDE69 /* CardManager.swift */; };
 		83E386AA265BBEE7005FDE69 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E386A9265BBEE7005FDE69 /* CardCell.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +33,9 @@
 		8321426F26593CD100A7A2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8321427626594B7400A7A2BB /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		8321427B26595E9700A7A2BB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		83583B7626625A8F00EE163F /* TopTenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTenController.swift; sourceTree = "<group>"; };
+		83583B7826626EEA00EE163F /* TopTenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTenManager.swift; sourceTree = "<group>"; };
+		83583B7A266297F700EE163F /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		83E386A5265BB8FB005FDE69 /* CardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
 		83E386A9265BBEE7005FDE69 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +88,7 @@
 			children = (
 				83E386A9265BBEE7005FDE69 /* CardCell.swift */,
 				8321427B26595E9700A7A2BB /* Card.swift */,
+				83583B7A266297F700EE163F /* Record.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,6 +98,7 @@
 			children = (
 				8321427626594B7400A7A2BB /* GameController.swift */,
 				8321426526593CCF00A7A2BB /* ViewController.swift */,
+				83583B7626625A8F00EE163F /* TopTenController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -99,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				83E386A5265BB8FB005FDE69 /* CardManager.swift */,
+				83583B7826626EEA00EE163F /* TopTenManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -175,11 +184,14 @@
 			files = (
 				83E386AA265BBEE7005FDE69 /* CardCell.swift in Sources */,
 				8321426626593CCF00A7A2BB /* ViewController.swift in Sources */,
+				83583B7B266297F800EE163F /* Record.swift in Sources */,
+				83583B7926626EEA00EE163F /* TopTenManager.swift in Sources */,
 				8321427726594B7500A7A2BB /* GameController.swift in Sources */,
 				83E386A6265BB8FB005FDE69 /* CardManager.swift in Sources */,
 				8321427C26595E9700A7A2BB /* Card.swift in Sources */,
 				8321426226593CCF00A7A2BB /* AppDelegate.swift in Sources */,
 				8321426426593CCF00A7A2BB /* SceneDelegate.swift in Sources */,
+				83583B7726625A8F00EE163F /* TopTenController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

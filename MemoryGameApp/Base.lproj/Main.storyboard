@@ -40,6 +40,18 @@
                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DWB-v7-drW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlN-dI-cg6">
+                                <rect key="frame" x="0.0" y="377" width="414" height="76"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="40"/>
+                                <size key="titleShadowOffset" width="2" height="1"/>
+                                <state key="normal" title="Top Ten">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                    <color key="titleShadowColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="ttButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CtJ-Fr-Sev"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -48,17 +60,21 @@
                             <constraint firstItem="ZDI-xt-B6a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CnC-iJ-e7w"/>
                             <constraint firstItem="ckw-Y4-Mbo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OGx-y5-KVZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZDI-xt-B6a" secondAttribute="trailing" id="Rjw-VP-sXr"/>
+                            <constraint firstItem="OlN-dI-cg6" firstAttribute="top" secondItem="ZDI-xt-B6a" secondAttribute="bottom" constant="14" id="Y6J-sh-NUt"/>
                             <constraint firstItem="ZDI-xt-B6a" firstAttribute="top" secondItem="bmw-Ml-H7g" secondAttribute="bottom" constant="60" id="Z21-k1-sMp"/>
                             <constraint firstItem="bmw-Ml-H7g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b54-cH-YF0"/>
                             <constraint firstItem="ckw-Y4-Mbo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hwf-xy-xyL"/>
                             <constraint firstAttribute="bottom" secondItem="ckw-Y4-Mbo" secondAttribute="bottom" id="iIy-wI-6di"/>
                             <constraint firstItem="ZDI-xt-B6a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pii-q6-cF9"/>
+                            <constraint firstItem="OlN-dI-cg6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="riG-pV-znS"/>
                             <constraint firstAttribute="trailing" secondItem="ckw-Y4-Mbo" secondAttribute="trailing" id="tBa-13-Coa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OlN-dI-cg6" secondAttribute="trailing" id="trP-g2-RpG"/>
                             <constraint firstItem="bmw-Ml-H7g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="zKj-Jy-FHZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="main_BTN_start" destination="ZDI-xt-B6a" id="4Yq-nW-egE"/>
+                        <outlet property="main_BTN_tt" destination="OlN-dI-cg6" id="kIw-ms-Rm1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -165,6 +181,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vac-hl-nug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1184" y="136"/>
+        </scene>
+        <!--Top Ten Controller-->
+        <scene sceneID="P7j-bj-fvW">
+            <objects>
+                <viewController storyboardIdentifier="topTenVC" id="HjZ-lR-3vI" customClass="TopTenController" customModule="MemoryGameApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KJd-sB-rf5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_img" translatesAutoresizingMaskIntoConstraints="NO" id="ALw-zq-Mkv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Ten" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISs-r9-3Om">
+                                <rect key="frame" x="0.0" y="64" width="414" height="83"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="50"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <color key="highlightedColor" systemColor="labelColor"/>
+                                <color key="shadowColor" systemColor="labelColor"/>
+                                <size key="shadowOffset" width="4" height="3"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUH-rG-cfk">
+                                <rect key="frame" x="10" y="44" width="61" height="44"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <size key="titleShadowOffset" width="2" height="1"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                    <color key="titleShadowColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonClicked:" destination="HjZ-lR-3vI" eventType="touchUpInside" id="2GO-Gc-z4f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c2n-B6-Daa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BUH-rG-cfk" firstAttribute="top" secondItem="c2n-B6-Daa" secondAttribute="top" id="06B-ER-8MX"/>
+                            <constraint firstItem="ISs-r9-3Om" firstAttribute="leading" secondItem="c2n-B6-Daa" secondAttribute="leading" id="9AN-mz-Oua"/>
+                            <constraint firstItem="ISs-r9-3Om" firstAttribute="top" secondItem="c2n-B6-Daa" secondAttribute="top" constant="20" id="AXk-0k-eMc"/>
+                            <constraint firstItem="ALw-zq-Mkv" firstAttribute="top" secondItem="KJd-sB-rf5" secondAttribute="top" id="MIY-WC-Axr"/>
+                            <constraint firstItem="ALw-zq-Mkv" firstAttribute="leading" secondItem="KJd-sB-rf5" secondAttribute="leading" id="RVc-kF-e1v"/>
+                            <constraint firstItem="c2n-B6-Daa" firstAttribute="trailing" secondItem="ALw-zq-Mkv" secondAttribute="trailing" id="UAq-tx-b3q"/>
+                            <constraint firstItem="c2n-B6-Daa" firstAttribute="trailing" secondItem="ISs-r9-3Om" secondAttribute="trailing" id="lzH-3e-yqK"/>
+                            <constraint firstAttribute="bottom" secondItem="ALw-zq-Mkv" secondAttribute="bottom" id="oSc-Mn-Vvc"/>
+                            <constraint firstItem="BUH-rG-cfk" firstAttribute="leading" secondItem="c2n-B6-Daa" secondAttribute="leading" constant="10" id="yFq-QB-ISj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tt_BTN_back" destination="BUH-rG-cfk" id="oBW-VK-RAc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zEM-bf-5IR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2123" y="157"/>
         </scene>
     </scenes>
     <resources>

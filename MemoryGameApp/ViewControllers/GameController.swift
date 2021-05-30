@@ -19,6 +19,7 @@ class GameController: UIViewController {
     var movesCounter:Int = 0
     var timerCounter:Int = 0
     var timer:Timer?
+    var topTenManager = TopTenManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,28 @@ class GameController: UIViewController {
         dialog.addAction(okAction)
         dialog.addAction(replayAction)
         
+        present(dialog, animated: true, completion: nil)
+    }
+    
+    func showHighscoreDialog() { // Show highscore dialog
+        let dialog = UIAlertController(title: "New Highscore!", message: "Please enter your name:", preferredStyle: .alert)
+        
+        let submitAction = UIAlertAction(title: "Submit", style: .default) { UIAlertAction in
+            let name = dialog.textFields![0].text
+            let record = Record(id: UUID().uuidString, name: name ?? "Player", time: self.timerCounter)
+            self.topTenManager.saveHighscore(record: record)
+            self.showEndDialog()
+        }
+        submitAction.isEnabled = false
+        dialog.addTextField { textField in
+            NotificationCenter.default.addObserver(forName: UITextField.textDidChangeNotification, object: textField, queue: OperationQueue.main) { _ in
+                let textCounter = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines).count ?? 0
+                let textIsNotEmpty = textCounter > 0
+                submitAction.isEnabled = textIsNotEmpty
+            }
+        }
+        
+        dialog.addAction(submitAction)
         present(dialog, animated: true, completion: nil)
     }
     
@@ -121,7 +144,11 @@ extension GameController: UICollectionViewDelegate, UICollectionViewDataSource {
                     cell1.frontImage.alpha = 0.6
                     if(checkForWin()){ // If the game is over
                         timer?.invalidate() // Stop timer
-                        showEndDialog()
+                        if(topTenManager.checkIfNewHighscore(time: timerCounter)){
+                            showHighscoreDialog()
+                        } else {
+                            showEndDialog()
+                        }
                     }
                 } else {
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) { // Delay for showing both cards and then flip
