@@ -32,5 +32,9 @@ class ViewController: UIViewController {
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
     }
+    
+    override open var shouldAutorotate: Bool {
+        return false
+    }
 }
 

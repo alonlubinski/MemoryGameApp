@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemoryGameApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_img" translatesAutoresizingMaskIntoConstraints="NO" id="ckw-Y4-Mbo">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmw-Ml-H7g">
-                                <rect key="frame" x="0.0" y="144" width="414" height="83"/>
+                                <rect key="frame" x="0.0" y="144" width="390" height="83"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="50"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <color key="highlightedColor" systemColor="labelColor"/>
@@ -29,7 +29,7 @@
                                 <size key="shadowOffset" width="4" height="3"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDI-xt-B6a">
-                                <rect key="frame" x="0.0" y="287" width="414" height="76"/>
+                                <rect key="frame" x="0.0" y="287" width="390" height="76"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="40"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
                                 <state key="normal" title="Start">
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlN-dI-cg6">
-                                <rect key="frame" x="0.0" y="377" width="414" height="76"/>
+                                <rect key="frame" x="0.0" y="377" width="390" height="76"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="40"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
                                 <state key="normal" title="Top Ten">
@@ -86,7 +86,7 @@
             <objects>
                 <viewController storyboardIdentifier="gameVC" id="rnv-Ct-ch6" customClass="GameController" customModule="MemoryGameApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8pA-4N-3vC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_img" translatesAutoresizingMaskIntoConstraints="NO" id="yIl-6u-txD">
@@ -94,7 +94,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tbX-LM-NwP">
-                                <rect key="frame" x="10" y="54" width="394" height="608"/>
+                                <rect key="frame" x="10" y="54" width="370" height="556"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wcb-SY-et2">
@@ -140,7 +140,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Moves: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M76-9e-9Xf">
-                                <rect key="frame" x="0.0" y="712" width="414" height="67"/>
+                                <rect key="frame" x="0.0" y="712" width="390" height="67"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
@@ -148,7 +148,7 @@
                                 <size key="shadowOffset" width="4" height="3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkX-W9-Kx5">
-                                <rect key="frame" x="0.0" y="811" width="414" height="32"/>
+                                <rect key="frame" x="0.0" y="811" width="390" height="32"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
@@ -187,14 +187,17 @@
             <objects>
                 <viewController storyboardIdentifier="topTenVC" id="HjZ-lR-3vI" customClass="TopTenController" customModule="MemoryGameApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KJd-sB-rf5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_img" translatesAutoresizingMaskIntoConstraints="NO" id="ALw-zq-Mkv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Ten" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISs-r9-3Om">
-                                <rect key="frame" x="0.0" y="64" width="414" height="83"/>
+                                <rect key="frame" x="16" y="54" width="358" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="xqe-OL-FhW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="50"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <color key="highlightedColor" systemColor="labelColor"/>
@@ -213,22 +216,52 @@
                                     <action selector="backButtonClicked:" destination="HjZ-lR-3vI" eventType="touchUpInside" id="2GO-Gc-z4f"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="al4-sh-Hfo">
+                                <rect key="frame" x="10" y="147" width="370" height="663"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bfv-2f-FQU">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="329"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HighscoreCell" id="4Lh-mr-X6u">
+                                                <rect key="frame" x="0.0" y="24.333333969116211" width="370" height="43.666667938232422"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Lh-mr-X6u" id="3Xe-nQ-KqO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="370" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WlC-CJ-ZDy">
+                                        <rect key="frame" x="0.0" y="334" width="370" height="329"/>
+                                    </mapView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c2n-B6-Daa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BUH-rG-cfk" firstAttribute="top" secondItem="c2n-B6-Daa" secondAttribute="top" id="06B-ER-8MX"/>
-                            <constraint firstItem="ISs-r9-3Om" firstAttribute="leading" secondItem="c2n-B6-Daa" secondAttribute="leading" id="9AN-mz-Oua"/>
-                            <constraint firstItem="ISs-r9-3Om" firstAttribute="top" secondItem="c2n-B6-Daa" secondAttribute="top" constant="20" id="AXk-0k-eMc"/>
-                            <constraint firstItem="ALw-zq-Mkv" firstAttribute="top" secondItem="KJd-sB-rf5" secondAttribute="top" id="MIY-WC-Axr"/>
-                            <constraint firstItem="ALw-zq-Mkv" firstAttribute="leading" secondItem="KJd-sB-rf5" secondAttribute="leading" id="RVc-kF-e1v"/>
-                            <constraint firstItem="c2n-B6-Daa" firstAttribute="trailing" secondItem="ALw-zq-Mkv" secondAttribute="trailing" id="UAq-tx-b3q"/>
-                            <constraint firstItem="c2n-B6-Daa" firstAttribute="trailing" secondItem="ISs-r9-3Om" secondAttribute="trailing" id="lzH-3e-yqK"/>
-                            <constraint firstAttribute="bottom" secondItem="ALw-zq-Mkv" secondAttribute="bottom" id="oSc-Mn-Vvc"/>
-                            <constraint firstItem="BUH-rG-cfk" firstAttribute="leading" secondItem="c2n-B6-Daa" secondAttribute="leading" constant="10" id="yFq-QB-ISj"/>
+                            <constraint firstAttribute="bottom" secondItem="ALw-zq-Mkv" secondAttribute="bottom" id="2AD-Vo-z7d"/>
+                            <constraint firstItem="c2n-B6-Daa" firstAttribute="bottom" secondItem="al4-sh-Hfo" secondAttribute="bottom" id="7Zb-WZ-cd9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ISs-r9-3Om" secondAttribute="trailing" id="QEK-dP-pOv"/>
+                            <constraint firstItem="c2n-B6-Daa" firstAttribute="trailing" secondItem="al4-sh-Hfo" secondAttribute="trailing" constant="10" id="Qcg-tv-WNB"/>
+                            <constraint firstItem="ISs-r9-3Om" firstAttribute="leading" secondItem="KJd-sB-rf5" secondAttribute="leadingMargin" id="aus-qP-zwf"/>
+                            <constraint firstItem="BUH-rG-cfk" firstAttribute="top" secondItem="c2n-B6-Daa" secondAttribute="top" id="bTf-33-x7L"/>
+                            <constraint firstItem="ALw-zq-Mkv" firstAttribute="leading" secondItem="KJd-sB-rf5" secondAttribute="leading" id="bsu-ug-U0o"/>
+                            <constraint firstItem="ISs-r9-3Om" firstAttribute="top" secondItem="c2n-B6-Daa" secondAttribute="top" constant="10" id="f69-YI-08w"/>
+                            <constraint firstItem="ALw-zq-Mkv" firstAttribute="top" secondItem="KJd-sB-rf5" secondAttribute="top" id="fX1-Na-LuP"/>
+                            <constraint firstItem="ALw-zq-Mkv" firstAttribute="trailing" secondItem="KJd-sB-rf5" secondAttribute="trailing" id="kgd-tO-KpM"/>
+                            <constraint firstItem="BUH-rG-cfk" firstAttribute="leading" secondItem="c2n-B6-Daa" secondAttribute="leading" constant="10" id="nkF-Ay-r0P"/>
+                            <constraint firstItem="al4-sh-Hfo" firstAttribute="leading" secondItem="c2n-B6-Daa" secondAttribute="leading" constant="10" id="nsg-oo-9v0"/>
+                            <constraint firstItem="ISs-r9-3Om" firstAttribute="bottom" secondItem="al4-sh-Hfo" secondAttribute="top" constant="-10" id="wc2-fh-JQs"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="highscoresTable" destination="bfv-2f-FQU" id="G3G-Fz-aNa"/>
+                        <outlet property="ttMap" destination="WlC-CJ-ZDy" id="310-gx-cAl"/>
                         <outlet property="tt_BTN_back" destination="BUH-rG-cfk" id="oBW-VK-RAc"/>
                     </connections>
                 </viewController>

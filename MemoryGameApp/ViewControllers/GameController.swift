@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class GameController: UIViewController {
 
@@ -20,12 +21,21 @@ class GameController: UIViewController {
     var timerCounter:Int = 0
     var timer:Timer?
     var topTenManager = TopTenManager()
+    var locationManager = CLLocationManager()
+    var lng: Double = 0.0
+    var lat: Double = 0.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         gameCollectionView.delegate = self
         gameCollectionView.dataSource = self
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         
         startGame()
     }
@@ -70,7 +80,7 @@ class GameController: UIViewController {
         
         let submitAction = UIAlertAction(title: "Submit", style: .default) { UIAlertAction in
             let name = dialog.textFields![0].text
-            let record = Record(id: UUID().uuidString, name: name ?? "Player", time: self.timerCounter)
+            let record = Record(id: UUID().uuidString, name: name ?? "Player", time: self.timerCounter, lng: self.lng, lat: self.lat)
             self.topTenManager.saveHighscore(record: record)
             self.showEndDialog()
         }
@@ -105,6 +115,10 @@ class GameController: UIViewController {
         }
         firstIndex = nil
         secondIndext = nil
+    }
+    
+    override open var shouldAutorotate: Bool {
+        return false
     }
     
 }
@@ -175,6 +189,16 @@ extension GameController: UICollectionViewDelegateFlowLayout {
         var res = CGSize(width: widthPerItem, height: widthPerItem)
         res.height = (collectionViewLayout.collectionView!.visibleSize.height / 4 - CGFloat(25))
         return res
+    }
+}
+
+extension GameController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let first = locations.first else {
+            return
+        }
+        lng = first.coordinate.longitude
+        lat = first.coordinate.latitude
     }
 }
 
